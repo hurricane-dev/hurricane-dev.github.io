@@ -538,7 +538,7 @@ body {
   .menu-btn span::after {
     display: block;
     position: absolute;
-    left: 8px;
+    left: 0px;
     top: -10px;
     content: '\2261';
     font-size: 33px;
