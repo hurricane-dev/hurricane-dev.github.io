@@ -31,10 +31,31 @@
                 <div class="header__right">
                     <button class="header__theme"></button>
                     <button class="header__profile">Вход/Регистрация</button>
+                    <div class="main-menu">
+                        <div class="menu">
+                            <a href="#" class="menu-btn">
+                                <span></span>
+                            </a>
+                            <nav class="menu-list">
+                                <a href="/">Главная</a>
+                                <a href="commands.html">Команды</a>
+                                <a href="rating.html">Общий рейтинг</a>
+                                <a href="offers.html">Услуги</a>
+                                <a href="help.html">Помощь</a>
+                                <a class="menu-list__media" href="login.html">Вход/Регистрация</a>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
     </header>
+    
+    
+    
+    
+
     <main class="main">
         <section class="first-display">
             <div class="container">
@@ -206,5 +227,16 @@
     </footer>
 
     <script src="assets/js/app.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script>
+        $('.menu-btn').on('click', function(e) {
+            e.preventDefault();
+            $('.menu').toggleClass('menu_active');
+            $('.content').toggleClass('content_active');
+        });
+    </script>
 </body>
 </html>
