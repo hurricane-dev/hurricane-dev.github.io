@@ -592,6 +592,84 @@ body {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
+.main-menu {
+    position: relative;
+    display: none;
+    overflow-x: hidden;
+}
+
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    width: 90%;
+    height: 100vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #fff;
+    transition: 0.5s;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+.menu_active {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+}
+
+.menu-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 50%;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.menu-list a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #25292C;
+    font-weight: 900;
+}
+
+.menu-list .menu-list__media {
+    padding: 1rem 2.5rem;
+    background-color: #25292C;
+    text-transform: unset;
+    border-radius: 5px;
+    color: white;
+}
+
+.menu-btn {
+    width: 35px;
+    height: 35px;
+    background-color: #25292C;
+    border-radius: 50%;
+    position: absolute;
+    right: -41px;
+    top: 12px;
+}
+
+.menu-btn span::after {
+    display: block;
+    position: absolute;
+    left: 8px;
+    top: -10px;
+    content: '\2261';
+    font-size: 33px;
+    z-index: 10000;
+    color: #fff;
+}
+
 .first-display {
     background: url(../../assets/images/first-display.jpg) no-repeat center center;
     background-size: cover;
@@ -1142,6 +1220,10 @@ body {
 }
 
 @media only screen and (max-width: 1200px) {
+    .main-menu {
+        display: block;
+    }
+
     .header {
         height: 6rem;
     }
@@ -1327,6 +1409,12 @@ body {
     .first-display__content > .content__text {
         font-size: 1.5rem;
         line-height: 2.4rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .menu-list__media {
+        display: none;
     }
 }
 

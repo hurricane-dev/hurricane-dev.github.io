@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("window.onscroll = function showHeader(){\r\n    let header = document.querySelector('.header');\r\n\r\n    if(window.pageYOffset > 200){\r\n        header.classList.add('header--fixed');\r\n    } else {\r\n        header.classList.remove('header--fixed');\r\n    }\r\n};\n\n//# sourceURL=webpack:///./src/assets/js/app.js?");
+eval("window.onscroll = function showHeader(){\r\n    let header = document.querySelector('.header');\r\n\r\n    if(window.pageYOffset > 250){\r\n        header.classList.add('header--fixed');\r\n    } else {\r\n        header.classList.remove('header--fixed');\r\n    }\r\n};\n\n//# sourceURL=webpack:///./src/assets/js/app.js?");
 
 /***/ }),
 
