@@ -375,6 +375,10 @@ body {
     color: white;
 }
 
+.main {
+    position: relative;
+}
+
 .container {
     max-width: 1240px;
     padding: 0 2rem;
@@ -624,22 +628,24 @@ body {
 }
 
 .auth-section {
-    height: 80vh;
-    min-height: 2rem;
-    margin-top: 2rem;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    min-height: 70rem;
     background-color: #cccccc;
+    position: relative;
 }
 
 .auth-section__wrapper {
+    position: absolute;
     border-radius: 15px;
     margin: 0 auto;
     width: 35rem;
-    min-height: 30rem;
+    max-height: 55rem;
     height: 100%;
     background-color: #F5F5F5;
     box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.4);
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .auth-section__authorize {
@@ -1360,6 +1366,7 @@ body {
 
     .header {
         height: 6rem;
+        margin-bottom: 2.5rem;
     }
 
     .second-display {
@@ -1595,5 +1602,15 @@ body {
 
     .first-display__picture {
         margin-top: 0;
+    }
+}
+
+@media only screen and (max-height: 360px) {
+    .auth-section {
+        height: 55rem;
+    }
+
+    .auth-section__wrapper {
+        width: 50rem;
     }
 }

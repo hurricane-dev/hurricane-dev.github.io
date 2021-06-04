@@ -12,8 +12,27 @@
     <title>G-RP ASSISTANT | Главная</title>
 </head>
 <body>
-
-    <header class="header">
+    <div class="popup-reg">
+      <div class="popup-reg-block">
+        <div class="popup-reg-block-image">
+          <img src="assets/images/register.svg" alt="Регистрация/Авторизация">
+        </div>
+        <div class="popup-reg-block-auth">
+          <h3 class="auth-title">Авторизация</h3>
+          <a href="#" class="auth-btn">Войти через ВКонтакте</a>
+          <span class="auth-text">Или</span>
+          <form action="#" class="auth-form">
+            <input class="auth-input email" name="email" type="email" placeholder="Почта">
+            <input class="auth-input pass" name="password" type="password" placeholder="Пароль">
+            <input type="submit" class="auth-btn-primary" value="Войти">
+          </form>
+          <a href="#" class="auth-link">Забыли пароль?</a>
+          <p class="auth-reg">Нет аккаунта? <a href="#" class="auth-link">Зарегистрируйтесь!</a></p>
+          <a href="#" class="popup-reg-close">&times;</a>
+        </div>
+        
+      </div>
+    </div>    <header class="header">
         <div class="container">
             <div class="header__wrapper">
                 <div class="header__logo">
@@ -30,7 +49,7 @@
                 </nav>
                 <div class="header__right">
                     <button class="header__theme"></button>
-                    <a href="auth.html"><button class="header__profile">Вход/Регистрация</button></a>
+                    <button class="header__profile">Вход/Регистрация</button>
                     <div class="main-menu">
                         <div class="menu">
                             <a href="#" class="menu-btn">
