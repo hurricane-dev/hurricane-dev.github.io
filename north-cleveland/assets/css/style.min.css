@@ -1,0 +1,123 @@
+html,
+body {
+  height: 100%; }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box; }
+
+body {
+  background: linear-gradient(90deg, #003acf 0%, #618dff 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif; }
+
+a {
+  text-decoration: none; }
+
+.main {
+  flex: 1 0 auto; }
+
+.footer {
+  flex-shrink: 0; }
+
+/* Header stylesheet */
+.header {
+  padding: 10px 0; }
+  .header-logo {
+    transform: scale(1);
+    transition: 0.5s ease; }
+    .header-logo:hover {
+      transform: scale(1.03); }
+  .header-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; }
+  .header .nav-link {
+    display: inline-block;
+    transition: 0.2s ease;
+    padding: 10px 10px; }
+    .header .nav-link:hover {
+      transform: translateY(-2px); }
+
+.nav-link,
+.button--primary {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.02em; }
+
+.vk-link {
+  font-size: 36px;
+  line-height: 41px;
+  padding-right: 10px; }
+
+.button--primary {
+  background: linear-gradient(90deg, #2f92ee 0%, #0061ba 100%);
+  box-shadow: 4px 4px 10px #0060ba;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: transform 0.2s ease; }
+  .button--primary:hover {
+    transform: translateY(-2px); }
+
+/* Main section stylesheet */
+.main-section {
+  position: relative;
+  height: 900px; }
+  .main-section-content {
+    margin-top: 170px; }
+  .main-section-heading {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 150%;
+    color: #fff;
+    letter-spacing: 0.02em;
+    margin-top: 75px; }
+  .main-section-btn {
+    display: block;
+    width: 222px;
+    padding: 15px 20px;
+    font-size: 14px;
+    line-height: 17px;
+    border-radius: 20px;
+    margin-top: 70px; }
+  .main-section-image {
+    position: absolute;
+    margin-left: 630px; }
+    .main-section-image img {
+      position: relative;
+      z-index: 1; }
+  .main-section-ender {
+    position: absolute;
+    bottom: 0;
+    background-color: #1e2456;
+    height: 5px;
+    width: 100%;
+    border: none; }
+
+.btn-arrow {
+  margin-left: 10px;
+  padding-right: 0; }
+
+/* Decor stylesheet */
+.decoration-dots {
+  position: absolute;
+  top: -230px;
+  right: 90px;
+  font-weight: 250;
+  font-size: 450px;
+  line-height: 17.5%;
+  /* or 79px */
+  color: #e9e9e9;
+  z-index: 0; }
+  .decoration-dots.dark {
+    top: 300px;
+    left: -145px;
+    color: #b1b1b1; }
