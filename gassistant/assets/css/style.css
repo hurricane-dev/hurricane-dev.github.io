@@ -1553,6 +1553,24 @@ body {
     }
 }
 
+@media only screen and (max-width: 900px) {
+    .popup-reg-block {
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-top: 15rem;
+    }
+
+    .popup-reg-block-auth {
+        border-radius: 5px;
+    }
+
+    .popup-reg-block-image {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 800px) {
     .sixth-display__content {
         margin-right: 0;
@@ -1624,10 +1642,60 @@ body {
     }
 }
 
+@media only screen and (max-width: 533px) {
+    .popup-reg-block {
+        width: 70%;
+        margin: 15rem auto;
+    }
+
+    .popup-reg-block-auth {
+        padding: 10px 20px;
+    }
+
+    .popup-reg-block-auth .auth-btn {
+        font-size: 14px;
+    }
+
+    .popup-reg-block-auth .auth-btn-primary {
+        font-size: 12px;
+    }
+
+    .popup-reg-block-auth .auth-link {
+        font-size: 14px;
+    }
+
+    .popup-reg-block-auth .auth-text {
+        font-size: 14px;
+    }
+
+    .popup-reg-block-auth .auth-reg {
+        font-size: 14px;
+    }
+
+    .popup-reg-block-auth .auth-input {
+        font-size: 14px;
+    }
+
+    .black--btn {
+        margin-bottom: 1.5rem;
+        display: block;
+    }
+
+    .heading {
+        margin-bottom: 0;
+    }
+}
+
 @media only screen and (max-width: 423px) {
     .first-display__content > .content__text {
         font-size: 1.3rem;
         line-height: 2.2rem;
+    }
+
+    .auth-btn::before {
+        margin-right: 0;
+        margin: 0 auto 5px;
+        display: block;
     }
 }
 
@@ -1661,6 +1729,35 @@ body {
 
     .first-display__picture {
         margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 354px) {
+    .popup-reg-block {
+        width: 60%;
+    }
+
+    .auth-btn span {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 480px) {
+    .popup-reg-block {
+        margin: 0.5rem auto;
+    }
+
+    .auth-link {
+        margin-bottom: 0;
+        padding: 5px 0;
+    }
+
+    .auth-reg span {
+        display: none;
+    }
+
+    .auth-reg .auth-link {
+        display: block;
     }
 }
 

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    
+    <!-- Useful meta tags -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>G-RP ASSISTANT | Команды</title>
+</head>
+<body>
+    <div class="popup-reg">
+      <div class="popup-reg-block">
+        <div class="popup-reg-block-image">
+          <img src="assets/images/register.svg" alt="Регистрация/Авторизация">
+        </div>
+        <div class="popup-reg-block-auth">
+          <h3 class="auth-title">Авторизация</h3>
+          <a href="#" class="auth-btn"><span>Войти через ВКонтакте</span></a>
+          <span class="auth-text">Или</span>
+          <form action="#" class="auth-form">
+            <input class="auth-input email" name="email" type="email" placeholder="Почта">
+            <input class="auth-input pass" name="password" type="password" placeholder="Пароль">
+            <input type="submit" class="auth-btn-primary" value="Войти">
+          </form>
+          <a href="#" class="auth-link">Забыли пароль?</a>
+          <p class="auth-reg"><span>Нет аккаунта?</span> <a href="register" class="auth-link">Зарегистрируйтесь!</a></p>
+          <a href="#" class="popup-reg-close">&times;</a>
+        </div>
+        
+      </div>
+    </div>    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__logo">
+                    <a href="/"><img src="assets/images/logo.png" alt="G-RP ASSISTANT"></a>
+                </div>
+                <nav class="header__nav">
+                    <ul class="nav__list">
+                        <li class="nav__list-item nav__list-item--active"><a class="nav__link nav__link--active" href="/">Главная</a></li>
+                        <li class="nav__list-item"><a class="nav__link" href="commands.html">Команды</a></li>
+                        <li class="nav__list-item"><a class="nav__link" href="rating.html">Общий рейтинг</a></li>
+                        <li class="nav__list-item"><a class="nav__link" href="offers.html">Услуги</a></li>                
+                        <li class="nav__list-item"><a class="nav__link" href="help.html">Помощь</a></li>
+                    </ul>
+                </nav>
+                <div class="header__right">
+                    <button class="header__theme"></button>
+                    <button class="header__profile">Вход/Регистрация</button>
+                    <div class="main-menu">
+                        <div class="menu">
+                            <a href="#" class="menu-btn">
+                                <span></span>
+                            </a>
+                            <nav class="menu-list">
+                                <a href="/">Главная</a>
+                                <a href="commands.html">Команды</a>
+                                <a href="rating.html">Общий рейтинг</a>
+                                <a href="offers.html">Услуги</a>
+                                <a href="help.html">Помощь</a>
+                                <a class="menu-list__media" href="auth.html">Вход/Регистрация</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+    
+    
+    
+    
+
+    <main class="main">
+        <section class="commands-display">
+          <div class="container">
+            <div class="commands-display__wrapper">
+              <div class="offers-display__flexbox">
+                <div class="commands-display__content">
+                    <h2 class="content__title light-bg">Приобретаемые услуги</h2>
+                    <p class="content__text light-bg">За отдельную плату вы можете приобрести дополнительные услуги чтобы улучшить возможности чат-бота именно в вашей беседе.<br><br>
+                    Так же вы можете сделать пожертвование, деньги полученные с пожертвований пойду на развитие проекта.</p>
+                </div>
+                <div class="commands-display__picture">
+                  <img src="assets/images/offers.svg" alt="Приобретаемые услуги">
+                </div>
+                
+              </div>
+              <div class="offers-display__cards">
+                <div class="offers-display__card blue">
+                  <h2 class="offers-card__title light-bg">Уникальная команда</h2>
+                  <p class="offers-card__text light-bg">Если вы считаете что вам не достаточно существующих команд в чат-боте.
+                  За отдельную плату вы можете заказать универсальную команду для пользователя/беседы.</p>
+                  <a href="#" class="offer-btn-blue">Приобрести</a>
+                </div>
+                <div class="offers-display__card orange">
+                  <h2 class="offers-card__title light-bg">Пожертвование</h2>
+                  <p class="offers-card__text light-bg">Если вы считаете что наш проект заслужил ваше доверие и заявил о своей надежности вы можете сделать пожертвование
+                  проекту. Деньги полученные с проекта пойдут только на его развитие.</p>
+                  <a href="#" class="offer-btn-orange">Пожертвовать</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__block col-4">
+                <ul>
+                    <li><span class="footer__block_title">Контакты</span></li>
+                    <li><a class="footer__block_link" href="#">Группа Вконтакте</a></li>
+                    <li><a class="footer__block_link" href="#">Группа разработчика</a></li>
+                    <li>Почта: <a class="footer__block_link" href="mailto:main@volkdev.ru"><span class="footer__block_title">main@volkdev.ru</span></a></li>
+                </ul>
+            </div>
+            <div class="footer__block col-4">
+                <ul>
+                    <li><span class="footer__block_title">Общее</span></li>
+                    <li><a class="footer__block_link" href="#">Статистика</a></li>
+                    <li><a class="footer__block_link" href="#">Рейтинг</a></li>
+                    <li><a class="footer__block_link" href="#">Команды</a></li>
+                </ul>
+    
+            </div>
+            <div class="footer__block col-4">
+                <ul>
+                    <li><span class="footer__block_title">Пожертвования</span></li>
+                    <li><a class="footer__block_link" href="#">Добровольное пожертвование</a></li>
+                    <li><a class="footer__block_link" href="#">Покупка уникальных команд</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <span class="footer__copyright_title">VOLK Development все права защищены 2021</span>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script>
+        $('.menu-btn').on('click', function(e) {
+            e.preventDefault();
+            $('.menu').toggleClass('menu_active');
+            $('.content').toggleClass('content_active');
+        });
+    </script>
+</body>
+</html>
