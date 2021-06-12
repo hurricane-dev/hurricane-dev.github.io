@@ -21,13 +21,19 @@
           <h3 class="auth-title">Авторизация</h3>
           <a href="#" class="auth-btn"><span>Войти через ВКонтакте</span></a>
           <span class="auth-text">Или</span>
-          <form action="#" class="auth-form">
+          <form action="#" class="auth-form" novalidate>
+            <div class="errors">Неверный адрес электронной почты</div>
+            <div class="auth-form-input">
+              <input class="auth-input error" name="email" type="email" placeholder="Почта" id="input-email-auth">
+              <a href="#" class="input-clear" id="clear-button-1">&times;</a>
+              <img class="email" src="../../assets/images/envelope.svg" alt="icon: envelope">
+            </div>
             <div class="errors"></div>
-            <input class="auth-input email" name="email" type="email" placeholder="Почта">
-            
-            <div class="errors"></div>
-            <input class="auth-input pass" name="password" type="password" placeholder="Пароль">
-            
+            <div class="auth-form-input">
+              <input class="auth-input" name="password" type="password" placeholder="Пароль" id="input-pass-auth">
+              <a href="#" class="input-clear" id="clear-button-2">&times;</a> 
+              <img class="pass" src="../../assets/images/pass.svg" alt="icon: password">
+            </div>
             <input type="submit" class="auth-btn-primary" value="Войти" disabled>
           </form>
           <a href="#" class="auth-link">Забыли пароль?</a>

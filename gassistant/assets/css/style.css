@@ -603,10 +603,10 @@ body {
 .popup-reg {
     display: none;
     position: fixed;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
     height: 100%;
     width: 100%;
     z-index: 10000;
@@ -645,8 +645,8 @@ body {
     display: flex;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-top: 10%;
     position: relative;
+    margin-top: 15rem;
 }
 
 .popup-reg-block-image {
@@ -746,6 +746,10 @@ body {
     transform: translateY(-1px);
 }
 
+.auth-btn-primary:disabled {
+    background-color: #788cf2;
+}
+
 .auth-form {
     display: block;
 }
@@ -754,26 +758,37 @@ body {
     width: 100%;
     display: block;
     margin: 0 auto;
-    padding: 5px 25px;
-    background: #e4e8fd;
-    border: 12px solid #e4e8fd;
+    padding: 15px 15px 15px 35px;
+    background-color: #e4e8fd;
+    border: 2px solid #e4e8fd;
     border-radius: 5px;
     margin-bottom: 1.7rem;
     transition: 0.2s ease;
+    color: rgba(35, 39, 42, 0.4);
+    position: relative;
+}
+
+.auth-input:focus {
+    border: 2px solid #4965ee;
+    color: #23272a;
 }
 
 .auth-input.email {
     background-image: url(../../assets/images/envelope.svg);
     background-size: 14px 11px;
-    background-position: left center;
+    background-position: left 10px top 18px;
     background-repeat: no-repeat;
 }
 
 .auth-input.pass {
     background-image: url(../../assets/images/pass.png);
     background-size: 13.5px 13.5px;
-    background-position: left center;
+    background-position: left 10px top 18px;
     background-repeat: no-repeat;
+}
+
+.auth-input.error {
+    border: 2px solid #ff4e4e;
 }
 
 .auth-reg {
@@ -789,6 +804,16 @@ body {
     text-decoration: none;
     padding: 10px 0;
     color: #4965EE;
+}
+
+.errors {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: -0.011em;
+    color: #ff4e4e;
+    text-align: left;
+    margin-bottom: 0.5rem;
 }
 
 .main-menu {
@@ -1640,13 +1665,18 @@ body {
     }
 }
 
+@media only screen and (max-width: 1024px) {
+    .popup-reg-block {
+        margin: 5rem auto;
+    }
+}
+
 @media only screen and (max-width: 900px) {
     .popup-reg-block {
         -ms-flex-direction: column-reverse;
         flex-direction: column-reverse;
         -ms-flex-align: center;
         align-items: center;
-        margin-top: 15rem;
     }
 
     .popup-reg-block-auth {
@@ -1732,7 +1762,7 @@ body {
 @media only screen and (max-width: 533px) {
     .popup-reg-block {
         width: 70%;
-        margin: 15rem auto;
+        margin: 2.5rem auto;
     }
 
     .popup-reg-block-auth {
@@ -1830,10 +1860,6 @@ body {
 }
 
 @media only screen and (max-height: 480px) {
-    .popup-reg-block {
-        margin: 0.5rem auto;
-    }
-
     .auth-link {
         margin-bottom: 0;
         padding: 5px 0;
