@@ -1274,7 +1274,7 @@ body {
 
 .commands-display {
     background-color: #ffffff;
-    min-height: 100vh;
+    max-height: 300vh;
 }
 
 .commands-display__flexbox {
@@ -1346,6 +1346,93 @@ body {
 
 .commands-display__commands__item:nth-child(even) {
     background-color: #e4e8fd;
+}
+
+.offers-card__title {
+    font-weight: 900;
+    font-size: 1.8rem;
+    line-height: 133%;
+    letter-spacing: -0.011em;
+    color: #23272a;
+    margin-bottom: 1rem;
+}
+
+.offers-card__text {
+    font-size: 15px;
+    line-height: 160%;
+    letter-spacing: -0.011em;
+    color: #23272a;
+    margin-bottom: 2rem;
+}
+
+.offers-display__flexbox {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.offers-display__cards {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.offers-display__card {
+    max-width: 590px;
+    padding: 20px 30px 20px 20px;
+    border-radius: 10px;
+    height: auto;
+}
+
+.offers-display__card.blue {
+    background-color: rgba(73, 101, 238, 0.15);
+}
+
+.offers-display__card.orange {
+    background-color: rgba(238, 172, 73, 0.15);
+}
+
+.offer-btn-blue {
+    display: inline-block;
+    background: #4965ee;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 12px 40px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 147%;
+    transition: 0.3s ease;
+}
+
+.offer-btn-blue:hover {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px 0 rgba(255, 255, 255, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.offer-btn-orange {
+    display: inline-block;
+    background: #eeac49;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 12px 30px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 147%;
+    transition: 0.2s ease;
+}
+
+.offer-btn-orange:hover {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px 0 rgba(255, 255, 255, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .footer {
