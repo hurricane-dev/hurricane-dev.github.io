@@ -22,19 +22,19 @@
           <a href="#" class="auth-btn"><span>Войти через ВКонтакте</span></a>
           <span class="auth-text">Или</span>
           <form action="#" class="auth-form" novalidate>
-            <div class="errors">Неверный адрес электронной почты</div>
+            <div class="errors" id="error1">Неверный адрес электронной почты</div>
             <div class="auth-form-input">
-              <input class="auth-input error" name="email" type="email" placeholder="Почта" id="input-email-auth">
+              <input class="auth-input error" name="email" type="email" placeholder="Почта" id="input-email-auth" onkeyup="stoppedTyping()">
               <a href="#" class="input-clear" id="clear-button-1">&times;</a>
               <img class="email" src="assets/images/envelope.svg" alt="icon: envelope">
             </div>
-            <div class="errors"></div>
+            <div class="errors" id="error2"></div>
             <div class="auth-form-input">
-              <input class="auth-input" name="password" type="password" placeholder="Пароль" id="input-pass-auth">
+              <input class="auth-input" name="password" type="password" placeholder="Пароль" id="input-pass-auth" onkeyup="success()">
               <a href="#" class="input-clear" id="clear-button-2">&times;</a> 
               <img class="pass" src="assets/images/pass.svg" alt="icon: password">
             </div>
-            <input type="submit" class="auth-btn-primary" value="Войти" disabled>
+            <input type="submit" class="auth-btn-primary" id="authorizate" value="Войти" disabled>
           </form>
           <a href="#" class="auth-link">Забыли пароль?</a>
           <p class="auth-reg"><span>Нет аккаунта?</span> <a href="register" class="auth-link">Зарегистрируйтесь!</a></p>
@@ -63,7 +63,7 @@
                     <div class="main-menu">
                         <div class="menu">
                             <a href="#" class="menu-btn">
-                                <span></span>
+                                <img class="menu-btn__icon" src="assets/images/menu-burger.svg" width="30" height="30">
                             </a>
                             <nav class="menu-list">
                                 <a href="/">Главная</a>
@@ -95,8 +95,9 @@
                             <h2 class="content__title light-bg">Команды чат-бота G-RP Assistant</h2>
                             <p class="content__text light-bg">Чат-бот имеет в своем распоряжении множество команд которые позволяют
                                 детально настроить многие аспекты которые нужны будут для приятного
-                                общения и управления. <br><br> Для более детальной настройки вы можете купить индивидуально написанные команды только под вашу беседу.</p>
-                            <a href="#" class="btn primary--btn">Личный кабинет</a>
+                                общения и управления.</p>
+                            <p class="content__text light-bg">Для более детальной настройки вы можете купить индивидуально написанные команды только под вашу беседу.</p>
+                            <a href="#" class="btn primary--btn commands-button">Личный кабинет</a>
                         </div>
                         <div class="commands-display__picture">
                             <img src="assets/images/commands.png" alt="Команды чат-бота G-RP Assistant">
@@ -104,41 +105,94 @@
                     </div>
                     <div class="commands-display__commands">
                         <h4 class="smaller__title light-bg">Команды модерирования</h4>
-                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</div>
-                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</div>
-                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</div>
-                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</div>
-                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</div>
-                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</div>
-                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</div>
-                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</div>
-                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</div>
-                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</div>
-                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</div>
+                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                        <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
                         <h4 class="smaller__title light-bg">Команды изменения прав</h4>
-                        <select name="" id="commands__select" class="commands-display__commands__select">
-                            <option value="commands">Команды изменения прав</option>
-                            <option value="commands">Команды изменения прав</option>
-                            <option value="commands">Команды изменения прав</option>
-                            <option value="commands">Команды изменения прав</option>
-                            <option value="commands">Команды изменения прав</option>
-                            <option value="commands">Команды изменения прав</option>
-                            <option value="commands">Команды изменения прав</option>
-                        </select>
+                        <a href="#" class="btn primary--btn commands-button" id="show-commands-btn1" style="margin-bottom: 1.7rem;">Показать команды</a>
+                        <div class="commands-hidden" id="list-1">
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                        </div>
                         <h4 class="smaller__title light-bg">Команды статистики</h4>
-                        <select name="" id="commands__select" class="commands-display__commands__select">
-                            <option value="commands">Команды статистики</option>
-                            <option value="commands">Команды статистики</option>
-                            <option value="commands">Команды статистики</option>
-                            <option value="commands">Команды статистики</option>
-                            <option value="commands">Команды статистики</option>
-                            <option value="commands">Команды статистики</option>
-                            <option value="commands">Команды статистики</option>
-                        </select>
+                        <a href="#" class="btn primary--btn commands-button" id="show-commands-btn2" style="margin-bottom: 1.7rem;">Показать команды</a>
+                        <div class="commands-hidden" id="list-2">
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                            <div class="commands-display__commands__item"><strong>!kick @id reason</strong><span> - команда кикает пользователя с
+                                    конференции и снимает с него все роли модерирования и индивидуально настроенные.</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <script>
+            const showCommandsListFirst = document.getElementById('show-commands-btn1');
+            const showCommandsListSecond = document.getElementById('show-commands-btn2');
+            const list1 = document.getElementById('list-1');
+            const list2 = document.getElementById('list-2');
+        
+            showCommandsListFirst.addEventListener("click", (e) => {
+                e.preventDefault();
+                showCommands(list1);
+            });
+        
+            showCommandsListSecond.addEventListener("click", (e) => {
+                e.preventDefault();
+                showCommands(list2);
+            });
+        
+        
+            function showCommands(elem) {
+                elem.classList.toggle('is-active');
+            }
+        </script>
     </main>
 
     <footer class="footer">
@@ -146,8 +200,8 @@
             <div class="footer__block col-4">
                 <ul>
                     <li><span class="footer__block_title">Контакты</span></li>
-                    <li><a class="footer__block_link" href="#">Группа Вконтакте</a></li>
-                    <li><a class="footer__block_link" href="#">Группа разработчика</a></li>
+                    <li><a class="footer__block_link" href="https://vk.com/grp.assistant" target="_blank">Группа Вконтакте</a></li>
+                    <li><a class="footer__block_link" href="https://vk.com/volkdev" target="_blank">Группа разработчика</a></li>
                     <li>Почта: <a class="footer__block_link" href="mailto:main@volkdev.ru"><span class="footer__block_title">main@volkdev.ru</span></a></li>
                 </ul>
             </div>
@@ -155,21 +209,21 @@
                 <ul>
                     <li><span class="footer__block_title">Общее</span></li>
                     <li><a class="footer__block_link" href="#">Статистика</a></li>
-                    <li><a class="footer__block_link" href="#">Рейтинг</a></li>
-                    <li><a class="footer__block_link" href="#">Команды</a></li>
+                    <li><a class="footer__block_link" href="rating.html">Рейтинг</a></li>
+                    <li><a class="footer__block_link" href="commands.html">Команды</a></li>
                 </ul>
     
             </div>
             <div class="footer__block col-4">
                 <ul>
                     <li><span class="footer__block_title">Пожертвования</span></li>
-                    <li><a class="footer__block_link" href="#">Добровольное пожертвование</a></li>
-                    <li><a class="footer__block_link" href="#">Покупка уникальных команд</a></li>
+                    <li><a class="footer__block_link" href="offers.html#donate">Добровольное пожертвование</a></li>
+                    <li><a class="footer__block_link" href="offers.html#commands">Покупка уникальных команд</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer__copyright">
-            <span class="footer__copyright_title">VOLK Development все права защищены 2021</span>
+            <span class="footer__copyright_title">VOLK Development все права защищены. &copy; 2021</span>
         </div>
     </footer>
 

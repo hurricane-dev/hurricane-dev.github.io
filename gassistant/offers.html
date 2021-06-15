@@ -22,19 +22,19 @@
           <a href="#" class="auth-btn"><span>Войти через ВКонтакте</span></a>
           <span class="auth-text">Или</span>
           <form action="#" class="auth-form" novalidate>
-            <div class="errors">Неверный адрес электронной почты</div>
+            <div class="errors" id="error1">Неверный адрес электронной почты</div>
             <div class="auth-form-input">
-              <input class="auth-input error" name="email" type="email" placeholder="Почта" id="input-email-auth">
+              <input class="auth-input error" name="email" type="email" placeholder="Почта" id="input-email-auth" onkeyup="stoppedTyping()">
               <a href="#" class="input-clear" id="clear-button-1">&times;</a>
               <img class="email" src="assets/images/envelope.svg" alt="icon: envelope">
             </div>
-            <div class="errors"></div>
+            <div class="errors" id="error2"></div>
             <div class="auth-form-input">
-              <input class="auth-input" name="password" type="password" placeholder="Пароль" id="input-pass-auth">
+              <input class="auth-input" name="password" type="password" placeholder="Пароль" id="input-pass-auth" onkeyup="success()">
               <a href="#" class="input-clear" id="clear-button-2">&times;</a> 
               <img class="pass" src="assets/images/pass.svg" alt="icon: password">
             </div>
-            <input type="submit" class="auth-btn-primary" value="Войти" disabled>
+            <input type="submit" class="auth-btn-primary" id="authorizate" value="Войти" disabled>
           </form>
           <a href="#" class="auth-link">Забыли пароль?</a>
           <p class="auth-reg"><span>Нет аккаунта?</span> <a href="register" class="auth-link">Зарегистрируйтесь!</a></p>
@@ -63,7 +63,7 @@
                     <div class="main-menu">
                         <div class="menu">
                             <a href="#" class="menu-btn">
-                                <span></span>
+                                <img class="menu-btn__icon" src="assets/images/menu-burger.svg" width="30" height="30">
                             </a>
                             <nav class="menu-list">
                                 <a href="/">Главная</a>
@@ -96,21 +96,19 @@
                     Так же вы можете сделать пожертвование, деньги полученные с пожертвований пойду на развитие проекта.</p>
                 </div>
                 <div class="commands-display__picture">
-                  <img src="assets/images/offers.svg" alt="Приобретаемые услуги">
+                  <img src="assets/images/offers.svg" alt="Приобретаемые услуги" id="commands">
                 </div>
                 
               </div>
               <div class="offers-display__cards">
                 <div class="offers-display__card blue">
                   <h2 class="offers-card__title light-bg">Уникальная команда</h2>
-                  <p class="offers-card__text light-bg">Если вы считаете что вам не достаточно существующих команд в чат-боте.
-                  За отдельную плату вы можете заказать универсальную команду для пользователя/беседы.</p>
-                  <a href="#" class="offer-btn-blue">Приобрести</a>
+                  <p class="offers-card__text light-bg">Если вы считаете что вам не достаточно существующих команд в чат-боте. За отдельную плату вы можете заказать универсальную команду для пользователя/беседы.</p>
+                  <a href="#" class="offer-btn-blue" id="donate">Приобрести</a>
                 </div>
                 <div class="offers-display__card orange">
                   <h2 class="offers-card__title light-bg">Пожертвование</h2>
-                  <p class="offers-card__text light-bg">Если вы считаете что наш проект заслужил ваше доверие и заявил о своей надежности вы можете сделать пожертвование
-                  проекту. Деньги полученные с проекта пойдут только на его развитие.</p>
+                  <p class="offers-card__text light-bg">Если вы считаете что наш проект заслужил ваше доверие и заявил о своей надежности - вы можете сделать пожертвование проекту. Деньги полученные с проекта пойдут только на его развитие.</p>
                   <a href="#" class="offer-btn-orange">Пожертвовать</a>
                 </div>
               </div>
@@ -124,8 +122,8 @@
             <div class="footer__block col-4">
                 <ul>
                     <li><span class="footer__block_title">Контакты</span></li>
-                    <li><a class="footer__block_link" href="#">Группа Вконтакте</a></li>
-                    <li><a class="footer__block_link" href="#">Группа разработчика</a></li>
+                    <li><a class="footer__block_link" href="https://vk.com/grp.assistant" target="_blank">Группа Вконтакте</a></li>
+                    <li><a class="footer__block_link" href="https://vk.com/volkdev" target="_blank">Группа разработчика</a></li>
                     <li>Почта: <a class="footer__block_link" href="mailto:main@volkdev.ru"><span class="footer__block_title">main@volkdev.ru</span></a></li>
                 </ul>
             </div>
@@ -133,21 +131,21 @@
                 <ul>
                     <li><span class="footer__block_title">Общее</span></li>
                     <li><a class="footer__block_link" href="#">Статистика</a></li>
-                    <li><a class="footer__block_link" href="#">Рейтинг</a></li>
-                    <li><a class="footer__block_link" href="#">Команды</a></li>
+                    <li><a class="footer__block_link" href="rating.html">Рейтинг</a></li>
+                    <li><a class="footer__block_link" href="commands.html">Команды</a></li>
                 </ul>
     
             </div>
             <div class="footer__block col-4">
                 <ul>
                     <li><span class="footer__block_title">Пожертвования</span></li>
-                    <li><a class="footer__block_link" href="#">Добровольное пожертвование</a></li>
-                    <li><a class="footer__block_link" href="#">Покупка уникальных команд</a></li>
+                    <li><a class="footer__block_link" href="offers.html#donate">Добровольное пожертвование</a></li>
+                    <li><a class="footer__block_link" href="offers.html#commands">Покупка уникальных команд</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer__copyright">
-            <span class="footer__copyright_title">VOLK Development все права защищены 2021</span>
+            <span class="footer__copyright_title">VOLK Development все права защищены. &copy; 2021</span>
         </div>
     </footer>
 
