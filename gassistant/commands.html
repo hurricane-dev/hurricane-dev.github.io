@@ -181,11 +181,19 @@
             showCommandsListFirst.addEventListener("click", (e) => {
                 e.preventDefault();
                 showCommands(list1);
+                showCommandsListFirst.innerHTML = 'Скрыть команды';
+                if (!list1.classList.contains('is-active')) {
+                showCommandsListFirst.innerHTML = 'Показать команды';
+                };
             });
         
             showCommandsListSecond.addEventListener("click", (e) => {
                 e.preventDefault();
                 showCommands(list2);
+                showCommandsListSecond.innerHTML = 'Скрыть команды';
+                if (!list2.classList.contains('is-active')) {
+                showCommandsListSecond.innerHTML = 'Показать команды';
+                };
             });
         
         
